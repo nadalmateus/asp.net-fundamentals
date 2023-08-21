@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Fundamentals.Mvc.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Fundamentals.Mvc.Data
@@ -9,5 +10,7 @@ namespace Fundamentals.Mvc.Data
             : base(options)
         {
         }
+
+        public DbSet<Student> Student { get; set; }
     }
 }

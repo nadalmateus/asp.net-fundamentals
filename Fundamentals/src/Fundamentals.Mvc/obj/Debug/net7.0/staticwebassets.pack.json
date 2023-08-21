@@ -197,8 +197,20 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\dev\\public\\asp.net-fundamentals\\Fundamentals\\src\\Fundamentals.Mvc\\wwwroot\\lib\\font-awesome\\fontawesome.min.css",
-      "PackagePath": "staticwebassets\\lib\\font-awesome\\fontawesome.min.css"
+      "Id": "C:\\dev\\public\\asp.net-fundamentals\\Fundamentals\\src\\Fundamentals.Mvc\\wwwroot\\lib\\fontawesome-iconpicker\\css\\fontawesome-iconpicker.css",
+      "PackagePath": "staticwebassets\\lib\\fontawesome-iconpicker\\css\\fontawesome-iconpicker.css"
+    },
+    {
+      "Id": "C:\\dev\\public\\asp.net-fundamentals\\Fundamentals\\src\\Fundamentals.Mvc\\wwwroot\\lib\\fontawesome-iconpicker\\css\\fontawesome-iconpicker.min.css",
+      "PackagePath": "staticwebassets\\lib\\fontawesome-iconpicker\\css\\fontawesome-iconpicker.min.css"
+    },
+    {
+      "Id": "C:\\dev\\public\\asp.net-fundamentals\\Fundamentals\\src\\Fundamentals.Mvc\\wwwroot\\lib\\fontawesome-iconpicker\\js\\fontawesome-iconpicker.js",
+      "PackagePath": "staticwebassets\\lib\\fontawesome-iconpicker\\js\\fontawesome-iconpicker.js"
+    },
+    {
+      "Id": "C:\\dev\\public\\asp.net-fundamentals\\Fundamentals\\src\\Fundamentals.Mvc\\wwwroot\\lib\\fontawesome-iconpicker\\js\\fontawesome-iconpicker.min.js",
+      "PackagePath": "staticwebassets\\lib\\fontawesome-iconpicker\\js\\fontawesome-iconpicker.min.js"
     },
     {
       "Id": "C:\\dev\\public\\asp.net-fundamentals\\Fundamentals\\src\\Fundamentals.Mvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
