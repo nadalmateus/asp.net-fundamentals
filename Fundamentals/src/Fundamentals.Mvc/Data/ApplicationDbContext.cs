@@ -1,4 +1,5 @@
 ﻿using Fundamentals.Mvc.Models;
+
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

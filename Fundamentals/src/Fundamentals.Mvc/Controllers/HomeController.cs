@@ -1,6 +1,8 @@
-﻿using Fundamentals.Mvc.Models;
+﻿using System.Diagnostics;
+
+using Fundamentals.Mvc.Models;
+
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace Fundamentals.Mvc.Controllers
 {

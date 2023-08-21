@@ -1,4 +1,5 @@
 using Fundamentals.Mvc.Data;
+
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 

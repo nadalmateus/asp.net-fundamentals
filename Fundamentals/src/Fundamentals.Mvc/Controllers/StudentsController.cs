@@ -1,10 +1,12 @@
 ﻿using Fundamentals.Mvc.Data;
 using Fundamentals.Mvc.Models;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Fundamentals.Mvc.Controllers
 {
+    [Route("my-students")]
     public class StudentsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -14,7 +16,6 @@ namespace Fundamentals.Mvc.Controllers
             _context = context;
         }
 
-        // GET: Students
         public async Task<IActionResult> Index()
         {
             return _context.Student != null ?
@@ -22,10 +23,10 @@ namespace Fundamentals.Mvc.Controllers
                         Problem("Entity set 'ApplicationDbContext.Student'  is null.");
         }
 
-        // GET: Students/Details/5
-        public async Task<IActionResult> Details(int? id)
+        [Route("details/{id:int}")]
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null || _context.Student == null)
+            if (_context.Student == null)
             {
                 return NotFound();
             }
@@ -40,18 +41,15 @@ namespace Fundamentals.Mvc.Controllers
             return View(student);
         }
 
-        // GET: Students/Create
+        [Route("new")]
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Students/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost("new")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,BirthDate,Email,Grade,Active")] Student student)
+        public async Task<IActionResult> Create([Bind("Id, Name, BirthDate, Email, EmailConfirmation, Grade, Active")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -62,10 +60,10 @@ namespace Fundamentals.Mvc.Controllers
             return View(student);
         }
 
-        // GET: Students/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        [Route("edit/{id:int}")]
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null || _context.Student == null)
+            if (_context.Student == null)
             {
                 return NotFound();
             }
@@ -78,10 +76,7 @@ namespace Fundamentals.Mvc.Controllers
             return View(student);
         }
 
-        // POST: Students/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost("edit/{id:int}")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,BirthDate,Email,Grade,Active")] Student student)
         {
@@ -113,10 +108,10 @@ namespace Fundamentals.Mvc.Controllers
             return View(student);
         }
 
-        // GET: Students/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        [Route("delete/{id:int}")]
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null || _context.Student == null)
+            if (_context.Student == null)
             {
                 return NotFound();
             }
@@ -131,8 +126,7 @@ namespace Fundamentals.Mvc.Controllers
             return View(student);
         }
 
-        // POST: Students/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost("delete/{id:int}"), ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
